@@ -1,0 +1,17 @@
+
+<%- include('./partials/sideMenuDr.ejs'); %>
+
+<div id ="data"><br>
+    <h4 class="up_rep">Patient List</p></h4>
+    <% patient.forEach(Patient => { %>
+        <ul class="list-group">
+            <li class="list-group-item">
+              Token Name: <br> <%= Patient.tokenname %> <br>
+              Patient Name: <br> <%= Patient.name %> <br> 
+              Patient Email:  <br><%= Patient.email %> <br> 
+              Patient Date:  <br><%= Patient.date %> <br>
+            </li>
+            </ul>
+    <% }) %>  
+       
+   
