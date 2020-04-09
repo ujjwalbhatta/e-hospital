@@ -1,17 +1,32 @@
+<%- include('./partials/headerDr.ejs'); %>
+<style>
+.pat_list{
+    text-align: center;
+}
+</style>
 
-<%- include('./partials/sideMenuDr.ejs'); %>
+<div class="scrollable" id ="data"><br>
+    <h4 class="pat_list">Patients List</h4>
+    <br>
+    <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Token Name</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Registration Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% patients.forEach(Patient => { %>
+    <tr>
+      <th scope="row"><%= Patient.tokenname %></th>
+      <td><%= Patient.name %></td>
+      <td><%= Patient.email %></td>
+      <td><%= Patient.date %></td>
+    </tr>
+    </tbody>
+    <% }) %>
+    </table>
+  </div>
 
-<div id ="data"><br>
-    <h4 class="up_rep">Patient List</p></h4>
-    <% patient.forEach(Patient => { %>
-        <ul class="list-group">
-            <li class="list-group-item">
-              Token Name: <br> <%= Patient.tokenname %> <br>
-              Patient Name: <br> <%= Patient.name %> <br> 
-              Patient Email:  <br><%= Patient.email %> <br> 
-              Patient Date:  <br><%= Patient.date %> <br>
-            </li>
-            </ul>
-    <% }) %>  
-       
-   
