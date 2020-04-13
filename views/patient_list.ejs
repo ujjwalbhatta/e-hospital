@@ -1,4 +1,4 @@
-<%- include('./partials/headerDr.ejs'); %>
+<%- include('./partials/sideMenuDr.ejs'); %>
 <style>
 .pat_list{
     text-align: center;
@@ -18,7 +18,7 @@
     </tr>
     </thead>
     <tbody>
-    <% patients.forEach(Patient => { %>
+    <% patient.forEach(Patient => { %>
     <tr>
       <th scope="row"><%= Patient.tokenname %></th>
       <td><%= Patient.name %></td>
@@ -29,4 +29,3 @@
     <% }) %>
     </table>
   </div>
-
